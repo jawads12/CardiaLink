@@ -2,7 +2,7 @@ import serial
 import time
 
 # Open the serial port
-with serial.Serial('COM8', 115200, bytesize=serial.EIGHTBITS,
+with serial.Serial('/dev/ttyUSB0', 115200, bytesize=serial.EIGHTBITS,
                    parity=serial.PARITY_NONE, stopbits=serial.STOPBITS_ONE,
                    timeout=1) as ser:
     print("Connected to", ser.port)
